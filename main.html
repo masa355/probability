@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>title</title>
+        <script src="index.js"></script>
+    </head>
+
+    <table>
+        <tr>
+            <td>
+                <button type="button" onclick="change()">start</button>
+                <b>結果: <span id="e"></span> 最大金額: <span id="max">1</span></b>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="s"><b> 式 (例: 10|-10)</b></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="num" value="10000"><b> 検証回数(多すぎると死ぬ)</b></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="k" onChange="checkmax()" value="1"><b> 初期掛け金</b></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="bi" onChange="checkmax()" value="2"><b> マーチン倍率</b></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="loop" onChange="checkmax()" value="0"><b> マーチンを何回やるか(-1で無限)</b></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="def" value="0"><b> スタート時の所持金</b></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><h3>詳細</h3></td>
+        </tr>
+        <tr>
+            <td><b>検証回数: <span id="total">0</span> (マーチン含む)</b></td>
+        </tr>
+        <tr>
+            <td><b>勝利数: <span id="win">0</span></b></td>
+        </tr>
+        <tr>
+            <td><b>敗北数: <span id="loss">0</span></td>
+        </tr>
+        <tr>
+            <td><b>勝率: <span id="win%">0</span>%</b></td>
+        </tr>
+        <tr>
+            <td><b>実質勝利数: <span id="Awin">0</span> (マーチンで勝利した数含む)</td>
+        </tr>
+        <tr>
+            <td><b>実質勝率: <span id="Awin%">0</span>%</b></td>
+        </tr>
+
+    </table>
+</html>
